@@ -33,13 +33,13 @@ System.register(['angular2/core', 'angular2/router', './albums.component', './co
                 AppComponent = __decorate([
                     router_1.RouteConfig([
                         { path: '/albums', name: 'Albums', component: albums_component_1.AlbumsComponent, useAsDefault: true },
-                        { path: '/contact', name: 'Contacts', component: contact_component_1.ContactComponent },
+                        { path: '/contact', name: 'Contact', component: contact_component_1.ContactComponent },
                         { path: '/*other', name: 'Other', redirectTo: ['Albums'] }
                     ]),
                     core_1.Component({
                         selector: 'my-app',
                         templateUrl: '/app/app.component.html',
-                        directives: [router_1.RouterOutlet]
+                        directives: [router_1.RouterOutlet, router_1.RouterLink]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
