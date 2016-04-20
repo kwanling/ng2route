@@ -1,13 +1,20 @@
 import {Component} from 'angular2/core';
-import {Router} from 'angular2/router';
+import {Router, CanDeactivate} from 'angular2/router';
 
 @Component({
     templateUrl: '/app/contact.component.html'
 })
-export class ContactComponent {
+export class ContactComponent implements CanDeactivate {
     
     constructor(private _router: Router) {
         
+    }
+    
+    routerCanDeactivate(next, prev) {
+        // console.log("next", next);
+        // console.log("prev", prev);
+        //if (this.form.isdirty)
+        return confirm("are you sure?");
     }
     
     onSubmit(form){
